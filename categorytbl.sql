@@ -1,0 +1,1 @@
+﻿select  tblProduct.ProID,tblProduct.Name,tblProduct.Description,tblProduct.Unit,tblProduct.Image from tblProduct

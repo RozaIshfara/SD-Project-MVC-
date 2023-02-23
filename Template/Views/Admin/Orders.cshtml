@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Template.Models.tblOrder>
+@{
+    /**/
+
+    ViewBag.Title = "Orders";
+    Layout = "~/Views/Shared/admin.cshtml";
+
+
+
+    // Layout = "~/Views/Shared/AdminLayoutPage.cshtml";
+}
+
+<h2>View Orders</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Product Id
+            </th>
+            <th>
+                Contact
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                Unit
+            </th>
+            <th>
+                Quantity
+            </th>
+            <th>
+                Total
+            </th>
+            <th>
+                Order Date
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.OrderId</td>
+            <td>@item.ProID</td>
+            <td>@item.Contact</td>
+            <td>@item.Address</td>
+            <td>@item.Unit BDT</td>
+            <td>@item.Qty</td>
+            <td>@item.Total</td>
+            <td>@item.OrderDate</td>
+
+
+
+
+      
+        </tr>
+        }
+    </tbody>
+</table>
+
+
+

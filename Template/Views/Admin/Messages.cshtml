@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Template.Models.tblContact>
+@{
+    ViewBag.Title = "Messages";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+<h2>Messages</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Messages
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.contactId</td>
+                <td>@item.Name</td>
+                <td>@item.Message</td>
+
+
+
+               
+            </tr>
+        }
+    </tbody>
+</table>

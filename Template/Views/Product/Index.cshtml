@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Template.Models.tblProduct>
+@{
+    /**/
+
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/admin.cshtml";
+
+
+
+    // Layout = "~/Views/Shared/AdminLayoutPage.cshtml";
+}
+
+<h2>View Products</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Price
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProID</td>
+                <td>@item.Description</td>
+                <td>@item.Unit BDT</td>
+
+
+
+                <td>
+                    <img src="~/Uploads/@item.Image" style="width:150px ; height:200px  ;" />
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", "Product", new { id=item.ProID})" class="btn btn-info">Edit</a>
+                    <a href="@Url.Action("Delete", "Product", new { id=item.ProID})" class="btn btn-info">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

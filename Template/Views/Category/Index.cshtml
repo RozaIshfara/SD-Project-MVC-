@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Template.Models.tblCategory>
+@{
+    /**/
+
+    ViewBag.Title = "Index";
+    // Layout = "~/Views/Shared/AdminLayoutPage.cshtml";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+<h2>View Catagory</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Action
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CatId</td>
+                <td>@item.Name</td>
+
+
+               
+            </tr>
+        }
+    </tbody>
+</table>
+
